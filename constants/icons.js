@@ -28,6 +28,9 @@ import chevron from "../assets/icons/chevron.png";
 import pack from "../assets/icons/package.png";
 import loading from "../assets/icons/loading.png";
 import search from "../assets/icons/search.png";
+import plus from "../assets/icons/plus.png";
+import chevronleft from "../assets/icons/chevron-left.png";
+import double from "../assets/icons/double.png";
 
 export default {
   auth,
@@ -60,4 +63,7 @@ export default {
   search,
   pack,
   loading,
+  chevronleft,
+  plus,
+  double,
 };

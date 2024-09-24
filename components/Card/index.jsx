@@ -1,25 +1,36 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-const Card = ({ icon, title, description,packs,loading }) => {
+const Card = ({ icon, title, description, packs, loading, user }) => {
   return (
-    <TouchableOpacity 
-      style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 16 }}
+    <TouchableOpacity
+      className="flex-row items-center justify-between p-4 border-t border-t-[#d1d4dc]"
       activeOpacity={0.7}
     >
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Image source={icon} style={{ width: 40, height: 40 }} />
-        <View style={{ flexDirection: 'column' }}>
-          <Text style={{ color: '#1a1d23', fontSize: 18, fontWeight: '600' }}>{title}</Text>
-          {description && (
-            <Text style={{ color: '#4f5668', fontSize: 14, fontWeight: '400' }}>{description}</Text>
-          )}
+      <View className="flex-row items-center space-x-4">
+        <Image source={icon} className="w-10 h-10" />
+        <View className="flex-col">
+          <Text className="text-[#1a1d23] text-lg font-semibold">{title}</Text>
+          <View className="flex flex-row items-center ">
+            {user && (<Image source={user} className="w-4 h-4 mr-1" />)}
+            <Text className="text-[#4f5668] text-sm font-normal">
+              {description}
+            </Text>
+          </View>
         </View>
       </View>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6}}>
-        <Image source={require("../../assets/icons/package.png")} style={{ width: 16, height: 16 }} />
-        <Text style={{ color: '#4f5668', fontSize: 14, fontWeight: '400' }}>{packs}</Text>
-        {loading && (<Image source={require("../../assets/icons/loading.png")} style={{ width: 24, height: 24 }} />)}
+      <View className="flex-row items-center space-x-1.5">
+        <Image
+          source={require("../../assets/icons/package.png")}
+          className="w-4 h-4"
+        />
+        <Text className="text-[#4f5668] text-sm font-normal">{packs}</Text>
+        {loading && (
+          <Image
+            source={require("../../assets/icons/loading.png")}
+            className="w-6 h-6"
+          />
+        )}
       </View>
     </TouchableOpacity>
   );

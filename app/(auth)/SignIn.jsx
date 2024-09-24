@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image, StatusBar, TouchableOpacity } from "react-native";
 import { icons } from "../../constants";
-import { useRouter } from "expo-router"; // Import useRouter
+import { useRouter } from "expo-router"; 
 
 const LoginScreen = () => {
-  const router = useRouter(); // Initialize the router for navigation
+  const router = useRouter();
 
   return (
     <View className="w-full h-full bg-[#001338]">
