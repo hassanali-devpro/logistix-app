@@ -7,19 +7,19 @@ import Receiving from './Receiving/_layout';
 
 
 const App = () => {
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false); 
-  //   }, 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); 
+    }, 2000);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-  // if (isLoading) {
-  //   return <Splash />;
-  // }
+  if (isLoading) {
+    return <Splash />;
+  }
 
   return (
     <SafeAreaView className=" ">
